@@ -2,7 +2,9 @@
 
 Implements particle systems using openGL
 
-Screen Recording 2021-05-18 at 11.29.33 PM.mov
+
+https://user-images.githubusercontent.com/55757317/118761398-534f7280-b842-11eb-94b5-d719e9cf86ae.mov
+
 
 TODO: Add a representative image for your project here
 

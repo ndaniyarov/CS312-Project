@@ -38,10 +38,12 @@ void ParticleSystem::draw()
 
    //glActiveTexture(GL_TEXTURE1);
    //glBindTexture(GL_TEXTURE_2D, mTexture1);
-   theRenderer.begin(mTexture, mBlendMode);
-   for (int i = 0; i < mParticles.size(); i++)
-   {
-      Particle particle = mParticles[i];
-      theRenderer.quad(particle.pos, particle.color, particle.size);
-   }
+
+         theRenderer.begin(mTexture, mBlendMode);
+            for (int i = 0; i < 32; i++)
+            {
+               Particle particle = mParticles[i];
+     
+               theRenderer.quad(particle.pos, particle.color, particle.size);
+            }
 }

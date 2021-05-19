@@ -1,4 +1,4 @@
-# Install script for directory: /Users/niginadaniyarova/Desktop/cs312/particles
+# Install script for directory: /Users/niginadaniyarova/Desktop/cs312/project/CS312-Project
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/Users/niginadaniyarova/Desktop/cs312/particles/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/Users/niginadaniyarova/Desktop/cs312/project/CS312-Project/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

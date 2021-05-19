@@ -67,10 +67,10 @@ RM = /usr/local/Cellar/cmake/3.19.2/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/niginadaniyarova/Desktop/cs312/particles
+CMAKE_SOURCE_DIR = /Users/niginadaniyarova/Desktop/cs312/project/CS312-Project
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/niginadaniyarova/Desktop/cs312/particles/build
+CMAKE_BINARY_DIR = /Users/niginadaniyarova/Desktop/cs312/project/CS312-Project/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -99,9 +99,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/niginadaniyarova/Desktop/cs312/particles/build/CMakeFiles /Users/niginadaniyarova/Desktop/cs312/particles/build//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/niginadaniyarova/Desktop/cs312/project/CS312-Project/build/CMakeFiles /Users/niginadaniyarova/Desktop/cs312/project/CS312-Project/build//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/niginadaniyarova/Desktop/cs312/particles/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/niginadaniyarova/Desktop/cs312/project/CS312-Project/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -142,32 +142,6 @@ demo/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/demo.dir/build.make CMakeFiles/demo.dir/build
 .PHONY : demo/fast
 
-#=============================================================================
-# Target rules for targets named confetti
-
-# Build rule for target.
-confetti: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 confetti
-.PHONY : confetti
-
-# fast build rule for target.
-confetti/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/confetti.dir/build.make CMakeFiles/confetti.dir/build
-.PHONY : confetti/fast
-
-#=============================================================================
-# Target rules for targets named billboard
-
-# Build rule for target.
-billboard: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 billboard
-.PHONY : billboard
-
-# fast build rule for target.
-billboard/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/billboard.dir/build.make CMakeFiles/billboard.dir/build
-.PHONY : billboard/fast
-
 src/AGLM.o: src/AGLM.cpp.o
 
 .PHONY : src/AGLM.o
@@ -175,8 +149,6 @@ src/AGLM.o: src/AGLM.cpp.o
 # target to build an object file
 src/AGLM.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/demo.dir/build.make CMakeFiles/demo.dir/src/AGLM.cpp.o
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/confetti.dir/build.make CMakeFiles/confetti.dir/src/AGLM.cpp.o
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/billboard.dir/build.make CMakeFiles/billboard.dir/src/AGLM.cpp.o
 .PHONY : src/AGLM.cpp.o
 
 src/AGLM.i: src/AGLM.cpp.i
@@ -186,8 +158,6 @@ src/AGLM.i: src/AGLM.cpp.i
 # target to preprocess a source file
 src/AGLM.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/demo.dir/build.make CMakeFiles/demo.dir/src/AGLM.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/confetti.dir/build.make CMakeFiles/confetti.dir/src/AGLM.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/billboard.dir/build.make CMakeFiles/billboard.dir/src/AGLM.cpp.i
 .PHONY : src/AGLM.cpp.i
 
 src/AGLM.s: src/AGLM.cpp.s
@@ -197,39 +167,7 @@ src/AGLM.s: src/AGLM.cpp.s
 # target to generate assembly for a file
 src/AGLM.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/demo.dir/build.make CMakeFiles/demo.dir/src/AGLM.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/confetti.dir/build.make CMakeFiles/confetti.dir/src/AGLM.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/billboard.dir/build.make CMakeFiles/billboard.dir/src/AGLM.cpp.s
 .PHONY : src/AGLM.cpp.s
-
-src/confetti.o: src/confetti.cpp.o
-
-.PHONY : src/confetti.o
-
-# target to build an object file
-src/confetti.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/demo.dir/build.make CMakeFiles/demo.dir/src/confetti.cpp.o
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/confetti.dir/build.make CMakeFiles/confetti.dir/src/confetti.cpp.o
-.PHONY : src/confetti.cpp.o
-
-src/confetti.i: src/confetti.cpp.i
-
-.PHONY : src/confetti.i
-
-# target to preprocess a source file
-src/confetti.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/demo.dir/build.make CMakeFiles/demo.dir/src/confetti.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/confetti.dir/build.make CMakeFiles/confetti.dir/src/confetti.cpp.i
-.PHONY : src/confetti.cpp.i
-
-src/confetti.s: src/confetti.cpp.s
-
-.PHONY : src/confetti.s
-
-# target to generate assembly for a file
-src/confetti.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/demo.dir/build.make CMakeFiles/demo.dir/src/confetti.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/confetti.dir/build.make CMakeFiles/confetti.dir/src/confetti.cpp.s
-.PHONY : src/confetti.cpp.s
 
 src/image.o: src/image.cpp.o
 
@@ -238,8 +176,6 @@ src/image.o: src/image.cpp.o
 # target to build an object file
 src/image.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/demo.dir/build.make CMakeFiles/demo.dir/src/image.cpp.o
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/confetti.dir/build.make CMakeFiles/confetti.dir/src/image.cpp.o
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/billboard.dir/build.make CMakeFiles/billboard.dir/src/image.cpp.o
 .PHONY : src/image.cpp.o
 
 src/image.i: src/image.cpp.i
@@ -249,8 +185,6 @@ src/image.i: src/image.cpp.i
 # target to preprocess a source file
 src/image.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/demo.dir/build.make CMakeFiles/demo.dir/src/image.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/confetti.dir/build.make CMakeFiles/confetti.dir/src/image.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/billboard.dir/build.make CMakeFiles/billboard.dir/src/image.cpp.i
 .PHONY : src/image.cpp.i
 
 src/image.s: src/image.cpp.s
@@ -260,63 +194,7 @@ src/image.s: src/image.cpp.s
 # target to generate assembly for a file
 src/image.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/demo.dir/build.make CMakeFiles/demo.dir/src/image.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/confetti.dir/build.make CMakeFiles/confetti.dir/src/image.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/billboard.dir/build.make CMakeFiles/billboard.dir/src/image.cpp.s
 .PHONY : src/image.cpp.s
-
-src/main-billboard.o: src/main-billboard.cpp.o
-
-.PHONY : src/main-billboard.o
-
-# target to build an object file
-src/main-billboard.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/billboard.dir/build.make CMakeFiles/billboard.dir/src/main-billboard.cpp.o
-.PHONY : src/main-billboard.cpp.o
-
-src/main-billboard.i: src/main-billboard.cpp.i
-
-.PHONY : src/main-billboard.i
-
-# target to preprocess a source file
-src/main-billboard.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/billboard.dir/build.make CMakeFiles/billboard.dir/src/main-billboard.cpp.i
-.PHONY : src/main-billboard.cpp.i
-
-src/main-billboard.s: src/main-billboard.cpp.s
-
-.PHONY : src/main-billboard.s
-
-# target to generate assembly for a file
-src/main-billboard.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/billboard.dir/build.make CMakeFiles/billboard.dir/src/main-billboard.cpp.s
-.PHONY : src/main-billboard.cpp.s
-
-src/main-confetti.o: src/main-confetti.cpp.o
-
-.PHONY : src/main-confetti.o
-
-# target to build an object file
-src/main-confetti.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/confetti.dir/build.make CMakeFiles/confetti.dir/src/main-confetti.cpp.o
-.PHONY : src/main-confetti.cpp.o
-
-src/main-confetti.i: src/main-confetti.cpp.i
-
-.PHONY : src/main-confetti.i
-
-# target to preprocess a source file
-src/main-confetti.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/confetti.dir/build.make CMakeFiles/confetti.dir/src/main-confetti.cpp.i
-.PHONY : src/main-confetti.cpp.i
-
-src/main-confetti.s: src/main-confetti.cpp.s
-
-.PHONY : src/main-confetti.s
-
-# target to generate assembly for a file
-src/main-confetti.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/confetti.dir/build.make CMakeFiles/confetti.dir/src/main-confetti.cpp.s
-.PHONY : src/main-confetti.cpp.s
 
 src/main-demo.o: src/main-demo.cpp.o
 
@@ -352,7 +230,6 @@ src/myparticlesystem.o: src/myparticlesystem.cpp.o
 # target to build an object file
 src/myparticlesystem.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/demo.dir/build.make CMakeFiles/demo.dir/src/myparticlesystem.cpp.o
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/confetti.dir/build.make CMakeFiles/confetti.dir/src/myparticlesystem.cpp.o
 .PHONY : src/myparticlesystem.cpp.o
 
 src/myparticlesystem.i: src/myparticlesystem.cpp.i
@@ -362,7 +239,6 @@ src/myparticlesystem.i: src/myparticlesystem.cpp.i
 # target to preprocess a source file
 src/myparticlesystem.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/demo.dir/build.make CMakeFiles/demo.dir/src/myparticlesystem.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/confetti.dir/build.make CMakeFiles/confetti.dir/src/myparticlesystem.cpp.i
 .PHONY : src/myparticlesystem.cpp.i
 
 src/myparticlesystem.s: src/myparticlesystem.cpp.s
@@ -372,8 +248,34 @@ src/myparticlesystem.s: src/myparticlesystem.cpp.s
 # target to generate assembly for a file
 src/myparticlesystem.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/demo.dir/build.make CMakeFiles/demo.dir/src/myparticlesystem.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/confetti.dir/build.make CMakeFiles/confetti.dir/src/myparticlesystem.cpp.s
 .PHONY : src/myparticlesystem.cpp.s
+
+src/myparticlesystem2.o: src/myparticlesystem2.cpp.o
+
+.PHONY : src/myparticlesystem2.o
+
+# target to build an object file
+src/myparticlesystem2.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/demo.dir/build.make CMakeFiles/demo.dir/src/myparticlesystem2.cpp.o
+.PHONY : src/myparticlesystem2.cpp.o
+
+src/myparticlesystem2.i: src/myparticlesystem2.cpp.i
+
+.PHONY : src/myparticlesystem2.i
+
+# target to preprocess a source file
+src/myparticlesystem2.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/demo.dir/build.make CMakeFiles/demo.dir/src/myparticlesystem2.cpp.i
+.PHONY : src/myparticlesystem2.cpp.i
+
+src/myparticlesystem2.s: src/myparticlesystem2.cpp.s
+
+.PHONY : src/myparticlesystem2.s
+
+# target to generate assembly for a file
+src/myparticlesystem2.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/demo.dir/build.make CMakeFiles/demo.dir/src/myparticlesystem2.cpp.s
+.PHONY : src/myparticlesystem2.cpp.s
 
 src/particlesystem.o: src/particlesystem.cpp.o
 
@@ -382,7 +284,6 @@ src/particlesystem.o: src/particlesystem.cpp.o
 # target to build an object file
 src/particlesystem.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/demo.dir/build.make CMakeFiles/demo.dir/src/particlesystem.cpp.o
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/confetti.dir/build.make CMakeFiles/confetti.dir/src/particlesystem.cpp.o
 .PHONY : src/particlesystem.cpp.o
 
 src/particlesystem.i: src/particlesystem.cpp.i
@@ -392,7 +293,6 @@ src/particlesystem.i: src/particlesystem.cpp.i
 # target to preprocess a source file
 src/particlesystem.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/demo.dir/build.make CMakeFiles/demo.dir/src/particlesystem.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/confetti.dir/build.make CMakeFiles/confetti.dir/src/particlesystem.cpp.i
 .PHONY : src/particlesystem.cpp.i
 
 src/particlesystem.s: src/particlesystem.cpp.s
@@ -402,7 +302,6 @@ src/particlesystem.s: src/particlesystem.cpp.s
 # target to generate assembly for a file
 src/particlesystem.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/demo.dir/build.make CMakeFiles/demo.dir/src/particlesystem.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/confetti.dir/build.make CMakeFiles/confetti.dir/src/particlesystem.cpp.s
 .PHONY : src/particlesystem.cpp.s
 
 src/renderer.o: src/renderer.cpp.o
@@ -412,8 +311,6 @@ src/renderer.o: src/renderer.cpp.o
 # target to build an object file
 src/renderer.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/demo.dir/build.make CMakeFiles/demo.dir/src/renderer.cpp.o
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/confetti.dir/build.make CMakeFiles/confetti.dir/src/renderer.cpp.o
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/billboard.dir/build.make CMakeFiles/billboard.dir/src/renderer.cpp.o
 .PHONY : src/renderer.cpp.o
 
 src/renderer.i: src/renderer.cpp.i
@@ -423,8 +320,6 @@ src/renderer.i: src/renderer.cpp.i
 # target to preprocess a source file
 src/renderer.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/demo.dir/build.make CMakeFiles/demo.dir/src/renderer.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/confetti.dir/build.make CMakeFiles/confetti.dir/src/renderer.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/billboard.dir/build.make CMakeFiles/billboard.dir/src/renderer.cpp.i
 .PHONY : src/renderer.cpp.i
 
 src/renderer.s: src/renderer.cpp.s
@@ -434,8 +329,6 @@ src/renderer.s: src/renderer.cpp.s
 # target to generate assembly for a file
 src/renderer.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/demo.dir/build.make CMakeFiles/demo.dir/src/renderer.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/confetti.dir/build.make CMakeFiles/confetti.dir/src/renderer.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/billboard.dir/build.make CMakeFiles/billboard.dir/src/renderer.cpp.s
 .PHONY : src/renderer.cpp.s
 
 # Help Target
@@ -446,30 +339,22 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... billboard"
-	@echo "... confetti"
 	@echo "... demo"
 	@echo "... src/AGLM.o"
 	@echo "... src/AGLM.i"
 	@echo "... src/AGLM.s"
-	@echo "... src/confetti.o"
-	@echo "... src/confetti.i"
-	@echo "... src/confetti.s"
 	@echo "... src/image.o"
 	@echo "... src/image.i"
 	@echo "... src/image.s"
-	@echo "... src/main-billboard.o"
-	@echo "... src/main-billboard.i"
-	@echo "... src/main-billboard.s"
-	@echo "... src/main-confetti.o"
-	@echo "... src/main-confetti.i"
-	@echo "... src/main-confetti.s"
 	@echo "... src/main-demo.o"
 	@echo "... src/main-demo.i"
 	@echo "... src/main-demo.s"
 	@echo "... src/myparticlesystem.o"
 	@echo "... src/myparticlesystem.i"
 	@echo "... src/myparticlesystem.s"
+	@echo "... src/myparticlesystem2.o"
+	@echo "... src/myparticlesystem2.i"
+	@echo "... src/myparticlesystem2.s"
 	@echo "... src/particlesystem.o"
 	@echo "... src/particlesystem.i"
 	@echo "... src/particlesystem.s"

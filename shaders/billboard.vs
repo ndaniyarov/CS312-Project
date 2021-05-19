@@ -7,6 +7,12 @@ uniform float uSize;
 uniform vec3 uOffset;
 uniform vec4 uColor;
 uniform mat4 uVP;
+uniform float uRows;
+uniform float uCols;
+uniform float r;
+uniform float c;
+uniform float uTime;
+uniform float uTimeOffset;
 
 out vec4 color;
 out vec2 uv;
@@ -14,10 +20,7 @@ out vec2 uv;
 void main()
 {
    color = uColor;
-   //for (int i = 0; i < 4; i++){
-    //  for (int j = 0; j < 8; j++){
-         //uv = (vPos.xy + vec2(1,1))/vec2(4,8);
-   uv = vPos.xy;
+   uv = (vPos.xy + vec2(c,r))/vec2(uCols,uRows);
    vec3 cen = vPos + vec3(-0.5, -0.5, 0);
    cen.xyz = cen.xyz * uSize;
    vec3 x = cross(vec3(0,1,0), normalize(uCameraPos-cen));
@@ -26,7 +29,4 @@ void main()
    mat3 t = mat3(normalize(x), normalize(y), z);
 
    gl_Position = uVP * vec4(t*cen+uOffset, 1.0); 
-      //   }
-   //}
 }
-

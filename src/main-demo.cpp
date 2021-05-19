@@ -8,6 +8,7 @@
 #include <sstream>
 #include <vector>
 #include "myparticlesystem.h"
+#include "myparticlesystem2.h"
 #include "renderer.h"
 
 using namespace std;
@@ -15,6 +16,7 @@ using namespace glm;
 using namespace agl;
 
 MyParticleSystem theSystem;
+MyParticleSystem2 theSystem2;
 
 static void key_callback(GLFWwindow* window, int key, int scancode, int action, int mods)
 {
@@ -64,8 +66,8 @@ int main(int argc, char** argv)
    glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
 
    /* Create a windowed mode window and its OpenGL context */
-   float width = 500;
-   float height = 500;
+   float width = 700;
+   float height = 700;
    window = glfwCreateWindow(width, height, "Particle Viewer", NULL, NULL);
    if (!window)
    {
@@ -90,12 +92,13 @@ int main(int argc, char** argv)
 
    glEnable(GL_DEPTH_TEST);
    glEnable(GL_CULL_FACE);
-   glClearColor(0.23,0.3,0.85, 1);
+   glClearColor(0,0,0, 1);
 
-   theSystem.init(20); // TODO: Set number of particles here
+   theSystem.init(1); // TODO: Set number of particles here
+   theSystem2.init(800);
    float fov = radians(30.0f);
    ParticleSystem::GetRenderer().perspective(fov, 1.0f, 0.1f, 10.0f);
-   ParticleSystem::GetRenderer().lookAt(vec3(0, 0, 4), vec3(0, 0, 0));
+   ParticleSystem::GetRenderer().lookAt(vec3(0, 0, 10), vec3(0, 0, 0));
 
    float lastTime = glfwGetTime();
    while (!glfwWindowShouldClose(window))
@@ -105,8 +108,12 @@ int main(int argc, char** argv)
       float dt = glfwGetTime() - lastTime;
       lastTime = glfwGetTime();
 
+      ParticleSystem::GetRenderer().animated(true);
       theSystem.update(dt);
       theSystem.draw();
+      ParticleSystem::GetRenderer().animated(false);
+      theSystem2.update(dt);
+      theSystem2.draw();
 
       // Swap front and back buffers
       glfwSwapBuffers(window);

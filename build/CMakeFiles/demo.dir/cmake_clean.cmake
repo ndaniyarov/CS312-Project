@@ -2,10 +2,10 @@ file(REMOVE_RECURSE
   "../bin/demo"
   "../bin/demo.pdb"
   "CMakeFiles/demo.dir/src/AGLM.cpp.o"
-  "CMakeFiles/demo.dir/src/confetti.cpp.o"
   "CMakeFiles/demo.dir/src/image.cpp.o"
   "CMakeFiles/demo.dir/src/main-demo.cpp.o"
   "CMakeFiles/demo.dir/src/myparticlesystem.cpp.o"
+  "CMakeFiles/demo.dir/src/myparticlesystem2.cpp.o"
   "CMakeFiles/demo.dir/src/particlesystem.cpp.o"
   "CMakeFiles/demo.dir/src/renderer.cpp.o"
 )

@@ -14,6 +14,8 @@ namespace agl {
       Renderer();
       virtual ~Renderer();
 
+      virtual void animated(bool is);
+
       virtual void init(const std::string& vertex, const std::string& fragment);
       virtual GLuint loadTexture(const std::string& imageName);
       virtual void perspective(float fovRadians, float aspect, float near, float far); 
@@ -41,6 +43,11 @@ namespace agl {
       glm::mat4 mViewMatrix;
       glm::vec3 mLookfrom;
       bool mInitialized;
+      float lastTime;
+      int c;
+      int r;
+   public:
+   bool mAnimated;
    };
 }
 

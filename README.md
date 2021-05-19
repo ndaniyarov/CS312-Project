@@ -1,6 +1,8 @@
-# particles
+# flames and smoke
 
 Implements particle systems using openGL
+
+Screen Recording 2021-05-18 at 11.29.33 PM.mov
 
 TODO: Add a representative image for your project here
 
